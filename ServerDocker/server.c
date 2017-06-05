@@ -37,13 +37,13 @@ void *thread_server(void *vargp)
  
 
 //main
-int main(int argc, char **argv)  
+int main(int argc, char *argv[])  
 {  
 	int client_sd;  
       	char buffer[5];  
       	int sd = 0 ;  
       	struct sockaddr_in server_sd;  
-	int port = 5010 ;
+	int port = atoi(argv[1]) ;
       	signal(SIGPIPE,SIG_IGN);  //This takes care of the issue that server doesn't close if one of the clients closes
       	
       	// create a socket  
