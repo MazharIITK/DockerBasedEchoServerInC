@@ -6,13 +6,13 @@ services:
     
     build: ./Proxy/
     
-    ports: #ports on which this proxy would listen
-      - 9956:5000 # which one proxy's port 5000 ???? (connect 9956 to port 5000 in the container)
+    ports:
+      - 9956:5000
     
-    depends_on: #docker-compose up will start services in dependency order.Here, server will be started before proxy.
+    depends_on:
       - server
     
-    external_links: #Link to containers started outside this docker-compose.yml
+    external_links:
       - server
 
   server:
