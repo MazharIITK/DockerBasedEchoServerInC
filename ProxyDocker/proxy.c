@@ -102,8 +102,8 @@ int main(int argc,char *argv[])
      	int port, proxy_port;
      	char ip[100];
      
-     	port = 5010 ; //server port
-     	proxy_port = 5000 ; //proxy port
+     	port = atoi(argv[1]) ; //server port
+     	proxy_port = atoi(argv[2]) ; //proxy port
 
      	hostname_to_ip("server", ip);
      
