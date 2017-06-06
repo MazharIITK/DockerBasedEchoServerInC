@@ -9,4 +9,5 @@ RUN gcc -o server server.c -lpthread
 EXPOSE 5010
 
 ENTRYPOINT ["./server"]
+CMD ["5010"]
 
